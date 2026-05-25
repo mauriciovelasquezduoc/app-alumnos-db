@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  IMAGE_NAME: alumnos-datos
+  IMAGE_NAME: app-alumnos-db
 
 permissions:
   contents: write   # necesario para crear tags git
