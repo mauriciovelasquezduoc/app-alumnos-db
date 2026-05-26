@@ -139,7 +139,7 @@ jobs:
           echo "Nueva imagen: $IMAGE"
 
           kubectl set image deployment/app-alumnos \
-            mysql=$IMAGE \
+            app-alumnos=$IMAGE \
             -n app-alumnos
 
 # ---------------------------------------------------------
