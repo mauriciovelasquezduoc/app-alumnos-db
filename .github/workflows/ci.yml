@@ -134,7 +134,7 @@ jobs:
 
           ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 
-          IMAGE="$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/${{ env.IMAGE_NAME }}:${{ needs.versioning.outputs.new_tag }}"
+          IMAGE="$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/${{ env.IMAGE_NAME }}:latest"
 
           echo "Nueva imagen: $IMAGE"
 
