@@ -140,7 +140,7 @@ jobs:
 
           kubectl set image deployment/mysql \
             mysql=$IMAGE \
-            -n tienda
+            -n app-alumnos
 
 # ---------------------------------------------------------
 # Ver rollout
@@ -148,7 +148,7 @@ jobs:
 
       - name: Rollout status
         run: |
-          kubectl rollout status deployment/mysql -n tienda
+          kubectl rollout status deployment/mysql -n app-alumnos
 
 # ---------------------------------------------------------
 # Ver pods
@@ -156,4 +156,4 @@ jobs:
 
       - name: Get pods
         run: |
-          kubectl get pods -n tienda
+          kubectl get pods -n app-alumnos
