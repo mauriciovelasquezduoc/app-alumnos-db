@@ -138,7 +138,7 @@ jobs:
 
           echo "Nueva imagen: $IMAGE"
 
-          kubectl set image deployment/mysql \
+          kubectl set image deployment/app-alumnos \
             mysql=$IMAGE \
             -n app-alumnos
 
@@ -148,7 +148,7 @@ jobs:
 
       - name: Rollout status
         run: |
-          kubectl rollout status deployment/mysql -n app-alumnos
+          kubectl rollout status deployment/app-alumnos -n app-alumnos
 
 # ---------------------------------------------------------
 # Ver pods
